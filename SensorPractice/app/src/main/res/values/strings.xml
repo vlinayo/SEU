@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Ejercicio 3</string>
+    <string name="acelAct"> Valores Actuales:</string>
+    <string name="add"> Añadir Valor </string>
+    <string name="contador"> Eje X</string>
+    <string name="tempMaxTitle"> Eje Z</string>
+    <string name="tempMinTitle"> Eje Y</string>
+    <string name="tempMeanTitle">Mean</string>
+    <string name="ok">Añadir</string>
+    <string name="cancel">Ignorar</string>
+    <string name="list"> Listar Valores</string>
+    <string name="acelMax"> Valores Máximos Registrados</string>
+    <string name="game"> Game</string>
+    <string name="ballTest">Test Ball</string>
+</resources>

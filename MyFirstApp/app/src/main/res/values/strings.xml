@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Ejercicio 2</string>
+    <string name="temp"> Ingrese Grados Celsius</string>
+    <string name="add"> Añadir Valor </string>
+    <string name="contador"> Total</string>
+    <string name="tempMaxTitle"> Max</string>
+    <string name="tempMinTitle"> Min</string>
+    <string name="tempMeanTitle">Mean</string>
+    <string name="ok">Añadir</string>
+    <string name="cancel">Ignorar</string>
+    <string name="list"> Listar Valores</string>
+</resources>
