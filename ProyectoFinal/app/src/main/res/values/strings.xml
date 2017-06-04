@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">ProyectoFinal</string>
     <string name="title_activity_maps">Map</string>
+    <string name="marker_title">Place Title</string>
+    <string name="radio_marker">Geofence Radio</string>
+    <string name="location_list">List Locations</string>
+
+
 </resources>
