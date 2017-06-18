@@ -13,9 +13,14 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.vlinayo.proyectofinal.R;
+import com.google.android.gms.location.Geofence;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.Marker;
 
 import java.io.Serializable;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,10 +28,13 @@ import java.util.List;
  * Created by vlinayo on 2/06/17.
  */
 
-public class LocationsListActivity  extends Activity implements Serializable {
+public class LocationsListActivity  extends Activity {
 
         ListView listView;
-        static ArrayList<Marker> list;
+        ArrayList<Marker> list;
+        ArrayList<Circle> clist;
+        ArrayList<Geofence> glist;
+
     @Override
         protected void onCreate(Bundle savedInstanceState){
             super.onCreate(savedInstanceState);
@@ -36,12 +44,17 @@ public class LocationsListActivity  extends Activity implements Serializable {
             listView = (ListView) findViewById(R.id.list);
 
             //Deifinimos los valores de la lista
-            list = MapsActivity.mList;
+            list = MapsActivity.geoFenceMarkerList;
+            clist = MapsActivity.geoFenceCircleList;
+//            glist = MapsActivity.mGeofenceList;
 
             final ArrayList<String> newList = new ArrayList<String>(list.size());
+
             for (Marker mylist : list) {
                 newList.add(mylist.getTitle());
             }
+
+
             System.out.println(newList);
             final ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_list_item_1, android.R.id.text1, newList);
@@ -58,13 +71,15 @@ public class LocationsListActivity  extends Activity implements Serializable {
 
                     new AlertDialog.Builder(LocationsListActivity.this)
                             .setTitle("¡Alert!")
-                            .setMessage("Do you want to delete this place?" + itemValue)
+                            .setMessage("Do you want to delete this place? " + itemValue)
                             .setNegativeButton(android.R.string.cancel, null) // dismisses by default
                             .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     list.remove(position);
                                     newList.remove(position);
-                                    MapsActivity.mList = list;
+                                    clist.remove(position);
+                                    MapsActivity.geoFenceMarkerList = list;
+                                    MapsActivity.geoFenceCircleList = clist;
                                     adapter.remove(itemValue);
                                     adapter.notifyDataSetChanged();
                                 }

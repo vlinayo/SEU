@@ -1,18 +1,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#085171">
+
     <EditText
         android:id="@+id/markerUsername"
         android:inputType="textEmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:backgroundTint="#f2f2f2"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="@string/marker_title"
-        android:backgroundTint="@android:color/black"/>
+        android:hint="@string/marker_title"/>
     <EditText
         android:id="@+id/markerRadio"
         android:inputType="number"
@@ -24,14 +28,8 @@
         android:layout_marginBottom="16dp"
         android:fontFamily="sans-serif"
         android:hint="@string/radio_marker"
-        android:backgroundTint="@android:color/black"/>
-
-    <!--<Spinner-->
-        <!--android:id="@+id/spinner"-->
-        <!--android:hint = "marker color"-->
-        <!--android:background="#D3D3D3"-->
-        <!--android:color="@android:color/white"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content" />-->
+        android:textColor="#ffffff"
+        android:textColorHint="#ffffff"
+        android:backgroundTint="#f2f2f2"/>
 
 </LinearLayout>

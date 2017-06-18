@@ -1,9 +1,19 @@
 <resources>
-    <string name="app_name">ProyectoFinal</string>
-    <string name="title_activity_maps">Map</string>
-    <string name="marker_title">Place Title</string>
+    <string name="app_name">Cheerlights</string>
+    <string name="title_activity_maps">Cheerlights - MapView</string>
+    <string name="marker_title">Geofence Marker</string>
     <string name="radio_marker">Geofence Radio</string>
     <string name="location_list">List Locations</string>
-
+    <string name="geofence_transition_invalid_type"> Error de transicion en geofence</string>
+    <string name="server"> Service Address</string>
+    <string name="port"> Port Number</string>
+    <string name="topic"> Topic</string>
+    <string name="button"> Save</string>
+    <string name="serverConfig">Setup your CloudMQTT connection:</string>
+    <string name="MQTTConfig">MQTTConfig</string>
+    <string name="welcome">Welcome to Cheerlights!</string>
+    <string name="init">Start</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
 
 </resources>
